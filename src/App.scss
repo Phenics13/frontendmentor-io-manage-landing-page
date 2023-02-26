@@ -1,0 +1,44 @@
+@import "./utils/variables.utils.scss";
+h1 {
+  color: $text-blue;
+  font-size: $heading-mobile;
+  font-weight: $bold;
+}
+
+h2 {
+  color: $text-blue;
+  font-size: $subheading-mobile;
+  font-weight: $bold;
+  line-height: 140%;
+}
+
+h3 {
+  color: $text-blue;
+  font-size: $listheading;
+  font-weight: $medium;
+}
+
+p {
+  color: $text-grey;
+  font-size: $normal;
+  font-weight: $regular;
+  line-height: $line-height-paragraph-mobile;
+}
+
+.container {
+  width: 85%;
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    width: 1110px;
+  }
+}
+
+.App {
+  position: relative;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

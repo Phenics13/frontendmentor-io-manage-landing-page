@@ -1,0 +1,32 @@
+.preview {
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 3.125rem 0;
+}
+
+.preview--image {
+  width: 100%;
+}
+
+.preview--title {
+  margin-top: 1.875rem;
+}
+
+.preview--text {
+  margin: 0.875rem 0 2.125rem 0;
+  width: 90%;
+  line-height: 160%;
+}
+
+.preview--bg {
+  width: 455px;
+  position: absolute;
+  top: -7rem;
+  right: -9rem;
+  z-index: -1;
+}
