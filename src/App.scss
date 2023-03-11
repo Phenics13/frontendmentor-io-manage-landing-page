@@ -26,7 +26,9 @@ p {
 }
 
 .container {
-  width: 85%;
+  width: 100%;
+  padding: 0 1.5rem;
+  text-align: center;
 }
 
 @media screen and (min-width: 1440px) {
@@ -41,4 +43,9 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.title {
+  font-weight: $bold;
+  margin-top: $mt-title-mobile;
 }

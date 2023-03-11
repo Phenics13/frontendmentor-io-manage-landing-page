@@ -1,12 +1,10 @@
 .preview {
-  text-align: center;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  padding: 3.125rem 0;
+  padding: 3.125rem 0 0;
 }
 
 .preview--image {
@@ -18,8 +16,8 @@
 }
 
 .preview--text {
+  font-size: 1rem;
   margin: 0.875rem 0 2.125rem 0;
-  width: 90%;
   line-height: 160%;
 }
 
