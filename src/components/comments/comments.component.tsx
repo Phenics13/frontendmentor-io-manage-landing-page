@@ -5,6 +5,7 @@ import avatar3 from "../../assets/avatar-richard.png";
 import avatar4 from "../../assets/avatar-shanai.png";
 import CommentCard from "../comment-card/comment-card.component";
 import Button from "../button/button.component";
+import { UIEvent, useRef, useState } from "react";
 
 export type CommentT = {
   photoUrl: string;
@@ -36,18 +37,37 @@ const COMMENTS: CommentT[] = [
 ];
 
 const Comments = () => {
+  const sliderRef = useRef<HTMLDivElement>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const handleScroll = (event: UIEvent<HTMLDivElement>) => {
+    if (!sliderRef.current) return;
+    const offset = sliderRef.current.getBoundingClientRect().x;
+    const width = sliderRef.current.children[0].clientWidth;
+    const activeIndex = Math.round(Math.abs(offset) / width);
+    setActiveIndex(activeIndex);
+  };
+
   return (
-    <div className="container">
-      <div className="comments">
-        <h2 className="comments--title">What's they've said</h2>
-        <div className="comments--items">
+    <section className="comments">
+      <h2 className="comments--title">What's they've said</h2>
+      <div className="slider--wrapper" onScroll={handleScroll}>
+        <div className="slider" ref={sliderRef}>
           {COMMENTS.map((comment, index) => (
             <CommentCard key={index} {...comment} />
           ))}
         </div>
-        <Button>Get Started</Button>
       </div>
-    </div>
+      <div className="slider--dots">
+        {COMMENTS.map((_, index) => (
+          <div
+            key={index}
+            className={`slider--dot ${index === activeIndex ? "--active" : ""}`}
+          ></div>
+        ))}
+      </div>
+      <Button>Get Started</Button>
+    </section>
   );
 };
 

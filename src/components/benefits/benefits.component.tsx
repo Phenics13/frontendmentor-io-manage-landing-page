@@ -27,11 +27,9 @@ const BENEFITS: BenefitT[] = [
 
 const Benefits = () => {
   return (
-    <div className="container">
+    <section className="container">
       <div className="benefits ">
-        <h2 className="benefits--title title">
-          What's different about Manage?
-        </h2>
+        <h2 className="benefits--title">What's different about Manage?</h2>
         <p className="benefits--text">
           Manage provides all the functionality your team needs, without the
           complexity. Our software is tailor-made for modern digital product
@@ -43,7 +41,7 @@ const Benefits = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

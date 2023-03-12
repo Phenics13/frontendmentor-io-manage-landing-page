@@ -1,4 +1,4 @@
-import { FC, ReactNode } from "react";
+import { ButtonHTMLAttributes, FC, ReactNode } from "react";
 
 import "./button.styles.scss";
 
@@ -14,12 +14,11 @@ const getButtonClass = (type: BUTTON_TYPES = BUTTON_TYPES.PRIMARY): string =>
   }[type]);
 
 type ButtonProps = {
-  children: ReactNode;
-  type?: BUTTON_TYPES;
-} & React.ButtonHTMLAttributes<HTMLButtonElement>;
+  buttonType?: BUTTON_TYPES;
+} & ButtonHTMLAttributes<HTMLButtonElement>;
 
-const Button: FC<ButtonProps> = ({ type, children, ...otherProps }) => {
-  const buttonClass = getButtonClass(type);
+const Button: FC<ButtonProps> = ({ buttonType, children, ...otherProps }) => {
+  const buttonClass = getButtonClass(buttonType);
   return (
     <button className={`${buttonClass} button`} {...otherProps}>
       {children}

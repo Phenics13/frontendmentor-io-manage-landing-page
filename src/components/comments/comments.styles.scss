@@ -1,7 +1,45 @@
+@import "../../utils/variables.utils.scss";
+.comments {
+  width: 100%;
+  text-align: center;
+}
+
 .comments--title {
   margin-top: 4rem;
 }
 
-.comments--button {
-  margin-bottom: 2.625rem;
+.slider--wrapper {
+  margin-top: 3.75rem;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.slider {
+  display: flex;
+  gap: 1.875rem;
+  width: min-content;
+}
+
+.slider--dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.25rem;
+  margin: 1.5rem 0 2.8rem;
+}
+
+.slider--dot {
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 50%;
+  border: 1px solid $primary;
+
+  &.--active {
+    background-color: $primary;
+  }
 }

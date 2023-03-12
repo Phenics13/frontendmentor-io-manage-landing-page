@@ -5,7 +5,7 @@ import Button from "../button/button.component";
 
 const Preview = () => {
   return (
-    <div className="container">
+    <section className="container">
       <div className="preview">
         <img src={bgPattern} className="preview--bg" alt="background image" />
         <img
@@ -22,7 +22,7 @@ const Preview = () => {
         </p>
         <Button>Get Started</Button>
       </div>
-    </div>
+    </section>
   );
 };
 
