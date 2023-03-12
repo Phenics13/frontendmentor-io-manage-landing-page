@@ -1,5 +1,6 @@
 import Benefit from "../benefit/benefit.component";
 import "./benefits.styles.scss";
+import bgPattern from "../../assets/bg-tablet-pattern.svg";
 
 export type BenefitT = {
   id: number;
@@ -29,16 +30,25 @@ const Benefits = () => {
   return (
     <section className="benefits">
       <div className="container">
-        <h2 className="benefits--title">What's different about Manage?</h2>
-        <p className="benefits--text">
-          Manage provides all the functionality your team needs, without the
-          complexity. Our software is tailor-made for modern digital product
-          teams.
-        </p>
-        <div className="benefits--items">
-          {BENEFITS.map((benefit, index) => (
-            <Benefit key={index} {...benefit} />
-          ))}
+        <div className="benefits--inner">
+          <img
+            src={bgPattern}
+            className="benefits--bg"
+            alt="background image"
+          />
+          <div className="benefits--content">
+            <h2 className="benefits--title">What's different about Manage?</h2>
+            <p className="benefits--text">
+              Manage provides all the functionality your team needs, without the
+              complexity. Our software is tailor-made for modern digital product
+              teams.
+            </p>
+          </div>
+          <div className="benefits--items">
+            {BENEFITS.map((benefit, index) => (
+              <Benefit key={index} {...benefit} />
+            ))}
+          </div>
         </div>
       </div>
     </section>

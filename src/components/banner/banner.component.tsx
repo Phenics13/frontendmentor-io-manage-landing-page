@@ -6,7 +6,7 @@ const Banner = () => {
     <section className="banner">
       <div className="container">
         <div className="banner--content">
-          <h1 className="banner--title">Simplify how your team works today.</h1>
+          <h2 className="banner--title">Simplify how your team works today.</h2>
           <Button buttonType={BUTTON_TYPES.SECONDARY}>Get Started</Button>
         </div>
       </div>

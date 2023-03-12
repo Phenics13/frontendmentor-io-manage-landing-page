@@ -1,19 +1,52 @@
+@import "../../utils/variables.utils.scss";
+
 .preview {
   margin-top: 3.125rem;
 }
 
+.preview--inner {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
 .preview--image {
   width: 100%;
+
+  @media screen and (min-width: 768px) {
+    width: 50%;
+  }
+}
+
+.preview--content {
+  max-width: $max-content-width;
+  margin: 0 auto;
+
+  @media screen and (min-width: 768px) {
+    margin: 0;
+  }
 }
 
 .preview--title {
   margin-top: 1.875rem;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 0;
+  }
 }
 
 .preview--text {
   font-size: 1rem;
   margin: 0.875rem 0 2.125rem 0;
   line-height: 160%;
+
+  @media screen and (min-width: 1024px) {
+    width: 90%;
+    margin: 2rem 0 2.125rem 0;
+  }
 }
 
 .preview--bg {
@@ -22,4 +55,15 @@
   top: -7rem;
   right: -9rem;
   z-index: -1;
+
+  @media screen and (min-width: 1024px) {
+    width: 814px;
+    top: -20rem;
+    right: -20rem;
+  }
+
+  @media screen and (min-width: 1280px) {
+    top: -10rem;
+    right: -10rem;
+  }
 }

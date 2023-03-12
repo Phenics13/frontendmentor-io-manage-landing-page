@@ -45,7 +45,6 @@ const Header = () => {
           in={showHeader}
           timeout={300}
           classNames="header--animation"
-          unmountOnExit
           onEnter={handleOnEnter}
           onExited={handleOnExited}
         >

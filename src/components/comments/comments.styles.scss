@@ -6,6 +6,10 @@
 
 .comments--title {
   margin-top: 4rem;
+
+  @media screen and (min-width: 1024px) {
+    margin-top: 9rem;
+  }
 }
 
 .slider--wrapper {
@@ -18,6 +22,11 @@
   }
   -ms-overflow-style: none;
   scrollbar-width: none;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 2.8rem;
+    scroll-snap-type: x proximity;
+  }
 }
 
 .slider {
@@ -31,6 +40,10 @@
   justify-content: center;
   gap: 0.25rem;
   margin: 1.5rem 0 2.8rem;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 
 .slider--dot {

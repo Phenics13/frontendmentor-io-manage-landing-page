@@ -30,22 +30,24 @@ const Footer = () => {
             <input type="text" placeholder="Updates in your inbox..." />
             <Button>Go</Button>
           </div>
-          <div className="footer--links">
+          <div className="footer--nav">
             {LINKS.map((link, index) => (
               <Link key={index} to={`/`}>
                 {link}
               </Link>
             ))}
           </div>
-          <div className="footer--socials">
-            {SOCIALS.map((social, index) => (
-              <Link key={index} to={`/`}>
-                <img src={social} />
-              </Link>
-            ))}
-          </div>
-          <div className="footer--logo">
-            <img src={logo} />
+          <div className="footer--links">
+            <div className="footer--socials">
+              {SOCIALS.map((social, index) => (
+                <Link key={index} to={`/`}>
+                  <img src={social} />
+                </Link>
+              ))}
+            </div>
+            <div className="footer--logo">
+              <img src={logo} />
+            </div>
           </div>
           <div className="footer--copyright">
             <span>Copyright 2020. All Rights Reserved</span>

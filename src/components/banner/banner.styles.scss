@@ -7,10 +7,37 @@
   background-image: url(../../assets/bg-simplify-section-mobile.svg);
   background-repeat: no-repeat;
   background-position-y: center;
+
+  @media screen and (min-width: 768px) {
+    background-image: url(../../assets/bg-simplify-section-desktop.svg);
+  }
+
+  @media screen and (min-width: 1024px) {
+    margin-top: 11.25rem;
+    padding: 4rem 0;
+  }
+
+  @media screen and (min-width: 1280px) {
+    background-position: 15rem -8rem;
+  }
+}
+
+.banner--content {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .banner--title {
+  max-width: $max-content-width;
   width: 95%;
   color: $white;
   margin: 0 auto 2rem;
+
+  @media screen and (min-width: 768px) {
+    width: 100%;
+    margin: 0;
+  }
 }

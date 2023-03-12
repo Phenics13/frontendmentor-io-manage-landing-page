@@ -3,6 +3,10 @@ h1 {
   color: $text-blue;
   font-size: $heading-mobile;
   font-weight: $bold;
+
+  @media screen and (min-width: 1280px) {
+    font-size: $heading;
+  }
 }
 
 h2 {
@@ -10,6 +14,11 @@ h2 {
   font-size: $subheading-mobile;
   font-weight: $bold;
   line-height: 140%;
+
+  @media screen and (min-width: 1280px) {
+    font-size: $subheading;
+    line-height: auto;
+  }
 }
 
 h3 {
@@ -23,17 +32,27 @@ p {
   font-size: $normal;
   font-weight: $regular;
   line-height: $line-height-paragraph-mobile;
+
+  @media screen and (min-width: 1280px) {
+    font-size: $paragraph;
+    line-height: $line-height-paragraph;
+  }
 }
 
 .container {
   width: 100%;
   padding: 0 1.5rem;
   text-align: center;
-}
 
-@media screen and (min-width: 1440px) {
-  .container {
-    width: 1110px;
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding: 0 6rem;
+  }
+  @media screen and (min-width: 1280px) {
+    padding: 0 10rem;
   }
 }
 

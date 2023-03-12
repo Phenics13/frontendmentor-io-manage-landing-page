@@ -5,6 +5,14 @@
   margin-top: $mt-list-item-mobile;
   text-align: left;
   width: 105%;
+  max-width: 28rem;
+
+  @media screen and (min-width: 1024px) {
+    width: 100%;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
 }
 
 .benefit--icon {
@@ -16,6 +24,10 @@
   line-height: 160%;
   position: absolute;
   z-index: 1;
+
+  @media screen and (min-width: 1280px) {
+    left: -5.5rem;
+  }
 }
 
 .benefit--title {
@@ -27,9 +39,13 @@
   width: 100%;
   margin-bottom: 0.625rem;
   background: $list-item;
-}
 
-.benefits--text {
-  width: 90%;
-  margin: 0 auto;
+  @media screen and (min-width: 768px) {
+    background: none;
+  }
+
+  @media screen and (min-width: 1280px) {
+    left: 0;
+    padding: 0.375rem 0 0.375rem 0;
+  }
 }

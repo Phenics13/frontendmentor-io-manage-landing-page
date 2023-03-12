@@ -1,10 +1,71 @@
+@import "../../utils/variables.utils.scss";
+
+.benefits--inner {
+  position: relative;
+  @media screen and (min-width: 1024px) {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 11.25rem;
+  }
+}
+
+.benefits--bg {
+  display: none;
+  position: absolute;
+  bottom: -36rem;
+  left: -40rem;
+  z-index: -1;
+  width: 814px;
+  height: 814px;
+
+  @media screen and (min-width: 1024px) {
+    display: block;
+  }
+}
+
+.benefits--content {
+  max-width: $max-content-width;
+  @media screen and (min-width: 768px) {
+    text-align: center;
+    margin: 0 auto;
+  }
+  @media screen and (min-width: 1024px) {
+    text-align: left;
+    margin: 0;
+    width: 40%;
+  }
+}
+
 .benefits--title {
   margin-bottom: 1rem;
   margin-top: 6rem;
+
+  @media screen and (min-width: 1024px) {
+    margin-top: 0;
+  }
+}
+
+.benefits--text {
+  width: 90%;
+  margin: 0 auto;
+
+  @media screen and (min-width: 768px) {
+    width: 100%;
+    margin: 0;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 90%;
+  }
 }
 
 .benefits--items {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media screen and (min-width: 1024px) {
+    width: 50%;
+  }
 }
