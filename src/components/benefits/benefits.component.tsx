@@ -27,8 +27,8 @@ const BENEFITS: BenefitT[] = [
 
 const Benefits = () => {
   return (
-    <section className="container">
-      <div className="benefits ">
+    <section className="benefits">
+      <div className="container">
         <h2 className="benefits--title">What's different about Manage?</h2>
         <p className="benefits--text">
           Manage provides all the functionality your team needs, without the

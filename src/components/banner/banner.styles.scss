@@ -2,6 +2,7 @@
 
 .banner {
   margin-top: 2.5rem;
+  padding: 6rem 0;
   background: $primary;
   background-image: url(../../assets/bg-simplify-section-mobile.svg);
   background-repeat: no-repeat;
@@ -12,8 +13,4 @@
   width: 95%;
   color: $white;
   margin: 0 auto 2rem;
-}
-
-.banner--content {
-  margin: 6rem auto;
 }

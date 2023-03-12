@@ -5,8 +5,8 @@ import Button from "../button/button.component";
 
 const Preview = () => {
   return (
-    <section className="container">
-      <div className="preview">
+    <section className="preview">
+      <div className="container">
         <img src={bgPattern} className="preview--bg" alt="background image" />
         <img
           src={previewIllustration}
