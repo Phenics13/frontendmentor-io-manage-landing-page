@@ -37,48 +37,50 @@ const Header = () => {
   };
 
   return (
-    <div className="container">
-      <header className="header">
-        <img src={logo} className="header--logo" alt="logo" />
-        <CSSTransition
-          nodeRef={headerRef}
-          in={showHeader}
-          timeout={300}
-          classNames="header--animation"
-          onEnter={handleOnEnter}
-          onExited={handleOnExited}
-        >
-          <div className="header--nav" ref={headerRef}>
-            <nav className="nav--inner">
-              <Link to="/">Pricing</Link>
-              <Link to="/">Product</Link>
-              <Link to="/">About Us</Link>
-              <Link to="/">Careers</Link>
-              <Link to="/">Community</Link>
-            </nav>
-          </div>
-        </CSSTransition>
-        {showCloseIcon && (
-          <div className="icon-wrapper">
-            <img
-              src={close}
-              className="header--close"
-              onClick={handleOnClickCloseIcon}
-            />
-          </div>
-        )}
-        {showHamburgerIcon && (
-          <div className="icon-wrapper">
-            <img
-              src={hamburger}
-              className="header--hamburger"
-              onClick={handleOnClickHamburgerIcon}
-            />
-          </div>
-        )}
-        <Button>Get Started</Button>
-      </header>
-    </div>
+    <header className="header">
+      <div className="container">
+        <div className="header--inner">
+          <img src={logo} className="header--logo" alt="logo" />
+          <CSSTransition
+            nodeRef={headerRef}
+            in={showHeader}
+            timeout={300}
+            classNames="header--animation"
+            onEnter={handleOnEnter}
+            onExited={handleOnExited}
+          >
+            <div className="header--nav" ref={headerRef}>
+              <nav className="nav--inner">
+                <Link to="/">Pricing</Link>
+                <Link to="/">Product</Link>
+                <Link to="/">About Us</Link>
+                <Link to="/">Careers</Link>
+                <Link to="/">Community</Link>
+              </nav>
+            </div>
+          </CSSTransition>
+          {showCloseIcon && (
+            <div className="icon-wrapper">
+              <img
+                src={close}
+                className="header--close"
+                onClick={handleOnClickCloseIcon}
+              />
+            </div>
+          )}
+          {showHamburgerIcon && (
+            <div className="icon-wrapper">
+              <img
+                src={hamburger}
+                className="header--hamburger"
+                onClick={handleOnClickHamburgerIcon}
+              />
+            </div>
+          )}
+          <Button>Get Started</Button>
+        </div>
+      </div>
+    </header>
   );
 };
 

@@ -5,7 +5,7 @@ const Banner = () => {
   return (
     <section className="banner">
       <div className="container">
-        <div className="banner--content">
+        <div className="banner--inner">
           <h2 className="banner--title">Simplify how your team works today.</h2>
           <Button buttonType={BUTTON_TYPES.SECONDARY}>Get Started</Button>
         </div>

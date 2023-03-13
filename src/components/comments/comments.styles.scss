@@ -2,9 +2,7 @@
 .comments {
   width: 100%;
   text-align: center;
-}
 
-.comments--title {
   margin-top: 4rem;
 
   @media screen and (min-width: 1024px) {
@@ -36,10 +34,11 @@
 }
 
 .slider--dots {
+  margin: 1.5rem 0 2.8rem;
+
   display: flex;
   justify-content: center;
   gap: 0.25rem;
-  margin: 1.5rem 0 2.8rem;
 
   @media screen and (min-width: 768px) {
     display: none;

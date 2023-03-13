@@ -1,10 +1,12 @@
 @import "../../utils/variables.utils.scss";
 
 .footer {
+  color: $white;
+
   width: 100%;
   padding: 3.125rem 0 2rem;
+
   background-color: $secondary;
-  color: $white;
 }
 
 .footer--content {
@@ -14,6 +16,7 @@
 
   @media screen and (min-width: 1024px) {
     position: relative;
+
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: initial;
@@ -23,6 +26,7 @@
 .footer--bar {
   max-width: $max-content-width;
   width: 100%;
+
   display: flex;
   gap: 0.5rem;
 
@@ -34,9 +38,10 @@
 
     width: 100%;
     height: min-content;
+    padding: 0.75rem 1.5rem;
+
     border: none;
     border-radius: $button-radius;
-    padding: 0.75rem 1.5rem;
 
     &:focus {
       outline: none;
@@ -49,18 +54,21 @@
 }
 
 .footer--nav {
+  text-align: left;
+
   margin: 3.125rem 0;
+
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   row-gap: 1rem;
   column-gap: 4rem;
-  text-align: left;
 
   a {
-    width: fit-content;
     text-decoration: none;
     color: inherit;
     font-size: $normal;
+
+    width: fit-content;
 
     &:hover {
       color: $primary;
@@ -104,11 +112,12 @@
   }
 
   a {
-    width: 33px;
-    height: 33px;
     text-decoration: none;
     color: inherit;
     font-size: $normal;
+
+    width: 33px;
+    height: 33px;
   }
 
   @media screen and (min-width: 1024px) {

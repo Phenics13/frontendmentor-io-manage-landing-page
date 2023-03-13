@@ -39,8 +39,9 @@
 }
 
 .preview--text {
-  font-size: 1rem;
   margin: 0.875rem 0 2.125rem 0;
+
+  font-size: 1rem;
   line-height: 160%;
 
   @media screen and (min-width: 1024px) {
@@ -51,10 +52,11 @@
 
 .preview--bg {
   width: 455px;
+
+  z-index: -1;
   position: absolute;
   top: -7rem;
   right: -9rem;
-  z-index: -1;
 
   @media screen and (min-width: 1024px) {
     width: 814px;
