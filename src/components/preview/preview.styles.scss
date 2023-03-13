@@ -68,4 +68,24 @@
     top: -10rem;
     right: -10rem;
   }
+
+  animation: movePreview 20s linear infinite;
+}
+
+@keyframes movePreview {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-5%, -10%);
+  }
+  50% {
+    transform: translate(10%, -25%);
+  }
+  75% {
+    transform: translate(15%, 0%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }

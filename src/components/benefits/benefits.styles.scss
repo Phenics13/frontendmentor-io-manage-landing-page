@@ -16,22 +16,6 @@
   }
 }
 
-.benefits--bg {
-  z-index: -1;
-
-  display: none;
-  width: 814px;
-  height: 814px;
-
-  position: absolute;
-  bottom: -36rem;
-  left: -40rem;
-
-  @media screen and (min-width: 1024px) {
-    display: block;
-  }
-}
-
 .benefits--content {
   max-width: $max-content-width;
 
@@ -75,5 +59,41 @@
 
   @media screen and (min-width: 1024px) {
     width: 50%;
+  }
+}
+
+.benefits--bg {
+  z-index: -1;
+
+  display: none;
+  width: 814px;
+  height: 814px;
+
+  position: absolute;
+  bottom: -36rem;
+  left: -40rem;
+
+  @media screen and (min-width: 1024px) {
+    display: block;
+  }
+
+  animation: moveBenefits 20s linear infinite;
+}
+
+@keyframes moveBenefits {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-5%, -10%);
+  }
+  50% {
+    transform: translate(10%, -25%);
+  }
+  75% {
+    transform: translate(15%, 0%);
+  }
+  100% {
+    transform: translate(0, 0);
   }
 }
